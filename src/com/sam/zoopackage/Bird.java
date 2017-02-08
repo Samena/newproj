@@ -6,4 +6,9 @@ public class Bird extends Animal{
 		super(age, name, species, breed, size, weight, height);
 	}
 
+	@Override
+	public void grow() {
+
+	}
+	
 }

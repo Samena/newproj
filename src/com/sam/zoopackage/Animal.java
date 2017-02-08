@@ -1,6 +1,6 @@
 package com.sam.zoopackage;
 
-public class Animal {
+public class Animal implements LivingThing{
 	
 	//Attributes//
 	
@@ -16,7 +16,6 @@ public class Animal {
 	//Constructor//
 	
 	public Animal(int age, String name, String species, String breed, String size, int weight, int height){
-		
 		this.age = age;
 		this.name = name;
 		this.species = species;
@@ -29,6 +28,7 @@ public class Animal {
 	
 	//Methods/ Getters and Setters//
 	
+
 	public int getAge(){
 		return age;
 	}
@@ -86,4 +86,40 @@ public class Animal {
 		return this.height = height;
 	}
 
+	@Override
+	public void excrete() {
+	
+	}
+
+	@Override
+	public void grow() {
+
+	}
+
+	@Override
+	public void move() {	
+	}
+
+	@Override
+	public void nutrition(){
+		
+	}
+
+	@Override
+	public void reproduce() {
+		
+	}
+
+	@Override
+	public void respire() {
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		
+	}
+	public void sprint() {	
+	}
+	
 }
