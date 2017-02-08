@@ -1,6 +1,5 @@
 package com.sam.zoopackage;
 
-public class Cat {
-	
+public interface Swim {
 
 }
