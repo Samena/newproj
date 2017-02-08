@@ -15,8 +15,8 @@ public class Snake extends Reptile{
 //Constructor//
 	
 //Builder Pattern would be used here.
-	public Snake(int age, String name, String species, String breed, String size, int weight, int height, boolean venomous, boolean endangered, boolean nocturnal, boolean dangerous) {
-		super(age, name, species, breed, size, weight, height);
+	public Snake(int age, String name, String species, String breed, String size, int weight, int height, boolean venomous, boolean endangered, boolean nocturnal, boolean dangerous,EnclosureType enclosure) {
+		super(age, name, species, breed, size, weight, height, enclosure);
 	}
 
 	

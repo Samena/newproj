@@ -1,6 +1,6 @@
 package com.sam.zoopackage;
 
-public class Animal implements LivingThing{
+public abstract class Animal extends Enclosure implements LivingThing{
 	
 	//Attributes//
 	
@@ -11,11 +11,15 @@ public class Animal implements LivingThing{
 	private String size;
 	private int weight;
 	private int height;
+
 	
 	
-	//Constructor//
+	//Constructor/
 	
-	public Animal(int age, String name, String species, String breed, String size, int weight, int height){
+
+	public Animal(int age, String name, String species, String breed, String size, int weight, int height, EnclosureType enclosure){
+		super(enclosure);
+		
 		this.age = age;
 		this.name = name;
 		this.species = species;
@@ -23,6 +27,7 @@ public class Animal implements LivingThing{
 		this.size = size;
 		this.weight = weight;
 		this.height = height;
+		this.enclosure = enclosure;
 		
 	}
 	

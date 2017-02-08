@@ -1,5 +1,6 @@
 package com.sam.zoopackage;
 
+
 public class Fish extends Animal implements Swim{
 	//Attributes//
 	
@@ -8,8 +9,8 @@ public class Fish extends Animal implements Swim{
 	
 	//Constructor//
 
-	public Fish(int age, String name, String species, String breed, String size, int weight, int height, String colour) {
-		super(age, name, species, breed, size, weight, height);
+	public Fish(int age, String name, String species, String breed, String size, int weight, int height, String colour,EnclosureType enclosure) {
+		super(age, name, species, breed, size, weight, height, enclosure);
 	}
 	
 	//Methods//

@@ -1,9 +1,10 @@
 package com.sam.zoopackage;
 
+
 public class Mammal extends Animal implements Run {
 
-	public Mammal(int age, String name, String species, String breed, String size, int weight, int height) {
-		super(age, name, species, breed, size, weight, height);
+	public Mammal(int age, String name, String species, String breed, String size, int weight, int height,EnclosureType enclosure) {
+		super(age, name, species, breed, size, weight, height, enclosure);
 	}
 
 	@Override

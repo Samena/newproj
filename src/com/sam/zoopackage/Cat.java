@@ -1,5 +1,7 @@
 package com.sam.zoopackage;
 
+
+
 public class Cat extends Mammal {
 	
 	//Variables//
@@ -7,8 +9,8 @@ public class Cat extends Mammal {
 	private boolean nocturnal;
 	private boolean dangerous;
 
-	public Cat(int age, String name, String species, String breed, String size, int weight, int height,boolean endangered, boolean nocturnal, boolean dangerous) {
-		super(age, name, species, breed, size, weight, height);
+	public Cat(int age, String name, String species, String breed, String size, int weight, int height,boolean endangered, boolean nocturnal, boolean dangerous,EnclosureType enclosure) {
+		super(age, name, species, breed, size, weight, height, enclosure);
 	}
 
 	public boolean isEndangered() {
