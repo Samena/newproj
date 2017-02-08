@@ -1,23 +1,25 @@
 package com.sam.zoopackage;
 
-public abstract class Animal {
+public class Animal {
 	
 	//Attributes//
 	
 	private int age;
 	private String name;
+	private String species;
 	private String breed;
-	private int size;
+	private String size;
 	private int weight;
 	private int height;
 	
 	
 	//Constructor//
 	
-	public Animal(int age, String name, String breed, int size, int weight, int height){
+	public Animal(int age, String name, String species, String breed, String size, int weight, int height){
 		
 		this.age = age;
 		this.name = name;
+		this.species = species;
 		this.breed = breed;
 		this.size = size;
 		this.weight = weight;
@@ -43,24 +45,31 @@ public abstract class Animal {
 		return this.name = name;
 	}
 	
-	public String getBreed(String breed){
-		return breed;
-		
+	public String getBreed(){
+		return breed;	
 	}
 	
 	public String setBreed(String breed){
 		return this.breed = breed;
 	}
 	
-	public int getSize(int size){
+	public String getSpecies(){
+		return species;
+	}
+	
+	public String setSpecies(String species){
+		return this.species = species;
+	}
+	
+	public String getSize(){
 		return size;
 	}
 	
-	public int setSize(int size){
+	public String setSize(String size){
 		return this.size = size;
 	}
 	
-	public int getWeight(int weight){
+	public int getWeight(){
 		return weight;
 	}
 	
@@ -69,12 +78,13 @@ public abstract class Animal {
 		
 	}
 	
-	public int getHeight(int height){
+	public int getHeight(){
 		return height;
 	}
 	
 	public int setHeight(int height){
 		return this.height = height;
 	}
+
 
 }
