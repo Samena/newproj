@@ -3,7 +3,7 @@ package com.sam.zoopackage;
 public class Amphibian extends Animal implements Swim{
 	
 	public Amphibian(int age, String name, String species, String breed, String size, int weight, int height,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
+		super(age, name, species, breed, size, weight, height, waste, breathsPerMin, enclosure);
 
 }
 
