@@ -86,5 +86,4 @@ public class Animal {
 		return this.height = height;
 	}
 
-
 }

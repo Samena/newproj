@@ -1,8 +1,10 @@
-package com.sam.zoopackage;
+package com.unit.test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.sam.zoopackage.Animal;
 
 public class AnimalTest1 {
 		
