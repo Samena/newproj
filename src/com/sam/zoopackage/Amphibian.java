@@ -30,6 +30,18 @@ public class Amphibian extends Animal implements Swim{
 	}
 	@Override
 	public void nutrition(){	
+	}
+
+	@Override
+	public void reproduce() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
+		
 	}	
 	
 }

@@ -1,7 +1,7 @@
 package com.sam.zoopackage;
 
 
-public class Mammal extends Animal implements Run {
+public abstract class Mammal extends Animal implements Run{
 
 	public Mammal(int age, String name, String species, String breed, String size, int weight, int height,EnclosureType enclosure) {
 		super(age, name, species, breed, size, weight, height, enclosure);
