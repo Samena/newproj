@@ -2,15 +2,15 @@ package com.sam.zoopackage;
 
 public abstract class Animal extends Enclosure implements LivingThing{
 	
-	private int age;
-	private String name;
-	private String species;
-	private String gender;
-	private String size;
-	private int weight;
-	private int height;
-	private double waste;
-	private int breathsPerMin;
+	int age;
+	String name;
+    String species;
+	String gender;
+	String size;
+	int weight;
+	int height;
+	double waste;
+	int breathsPerMin;
 
 
 	//Constructor//
@@ -71,7 +71,6 @@ public abstract class Animal extends Enclosure implements LivingThing{
 System.out.println(breathsPerMin);
 
 	}
-	
 	
 	public String getName() {
 		return name;
