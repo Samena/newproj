@@ -1,7 +1,7 @@
 package com.sam.zoopackage;
 
 public interface Flying {
-	void flying();
+	void fly();
 	void land();
 	void takeOff();
 

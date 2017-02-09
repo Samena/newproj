@@ -19,7 +19,7 @@ public class Pigeon extends Bird implements Flying{
 	}
 
 	@Override
-	public void flying() {
+	public void fly() {
 	
 	}
 

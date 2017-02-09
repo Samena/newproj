@@ -83,7 +83,7 @@ public class Bat extends Mammal implements Flying{
 		
 	}
 	@Override
-	public void flying() {
+	public void fly() {
 		
 		
 		

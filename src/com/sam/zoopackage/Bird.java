@@ -8,7 +8,7 @@ public class Bird extends Animal implements Flying{
 	
 	
 	@Override
-	public void flying(){
+	public void fly(){
 		if (species != "Penguin" || weight > 10){
 			System.out.println("This bird cannot fly");
 		}
