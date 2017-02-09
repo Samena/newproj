@@ -1,13 +1,11 @@
 package com.sam.zoopackage;
 
-
-
 public class Invertebrate extends Animal {
 	
 	//Constructor//
 
-	public Invertebrate(int age, String name, String species, String breed, String size, int weight, int height,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
+	public Invertebrate(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight) {
+		super(age, name, species, gender, size, weight, height, waste, height, enclosure, lifeExpectancy, idealWeight);
 
 	}
 	
@@ -23,6 +21,12 @@ public class Invertebrate extends Animal {
 
 	@Override
 	public void nutrition(){
+		
+	}
+
+	@Override
+	public void reproduce() {
+		// TODO Auto-generated method stub
 		
 	}
 

@@ -1,7 +1,5 @@
 package com.sam.zoopackage;
 
-
-
 public class Pigeon extends Bird implements Flying{
 	
 	//Variables//
@@ -16,8 +14,8 @@ public class Pigeon extends Bird implements Flying{
 		this.endangered = endangered;
 	}
 
-	public Pigeon(int age, String name, String species, String breed, String size, int weight, int height, EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure );
+	public Pigeon(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
+		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
 	}
 
 	@Override

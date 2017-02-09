@@ -7,6 +7,5 @@ public interface LivingThing {
 	void nutrition();
 	void reproduce();
 	void respire();
-	void sensitivity();
 
 }

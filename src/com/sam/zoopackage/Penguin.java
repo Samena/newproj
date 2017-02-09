@@ -1,7 +1,5 @@
 package com.sam.zoopackage;
 
-
-
 public class Penguin extends Bird implements Swim {
 	
    //Attributes//
@@ -9,24 +7,14 @@ public class Penguin extends Bird implements Swim {
 	
    //Constructor//
 	
-	public Penguin(int age, String name, String species, String breed, String size, int weight, int height,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
+	public Penguin(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight)
+	{
+		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
 		
 	}
 	
 	//Methods//
 
-	@Override
-	public void submerge() {	
-	}
-
-	@Override
-	public void canFloat() {	
-	}
-
-	@Override
-	public void emerge() {	
-	}
 	
 	public boolean isEndangered() {
 		return endangered;
@@ -39,5 +27,17 @@ public class Penguin extends Bird implements Swim {
 public void nutrition(){
 		
 	}
+
+@Override
+public void canSwim() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void breatheUnderwater() {
+	// TODO Auto-generated method stub
+	
+}
 	
 }

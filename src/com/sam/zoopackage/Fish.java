@@ -9,8 +9,8 @@ public class Fish extends Animal implements Swim{
 	
 	//Constructor//
 
-	public Fish(int age, String name, String species, String breed, String size, int weight, int height, String colour,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
+	public Fish(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
+		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
 	}
 	
 	//Methods//
@@ -32,16 +32,22 @@ public class Fish extends Animal implements Swim{
 	}
 
 	@Override
-	public void submerge() {	
-	}
-
-	@Override
-	public void canFloat() {	
-	}
-
-	@Override
-	public void emerge() {
+	public void reproduce() {
+		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void canSwim() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void breatheUnderwater() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

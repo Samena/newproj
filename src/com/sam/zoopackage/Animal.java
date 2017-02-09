@@ -11,11 +11,13 @@ public abstract class Animal extends Enclosure implements LivingThing{
 	int height;
 	double waste;
 	int breathsPerMin;
+	int lifeExpectancy;
+	int idealWeight;
 
 
 	//Constructor//
 	
-	public Animal(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure){
+	public Animal(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
 		super(enclosure);
 		
 		this.age = age;
@@ -28,10 +30,41 @@ public abstract class Animal extends Enclosure implements LivingThing{
 		this.enclosure = enclosure;
 		this.waste = waste;
 		this.breathsPerMin = breathsPerMin;
+		this.lifeExpectancy = lifeExpectancy;
+		this.idealWeight = idealWeight;
 	}
 	
+
 	//Methods//
+
+@Override 
+public void grow(){
+	if(age >= 0 && ((lifeExpectancy/100))*10 >= age){
+		System.out.print("Animal is young and growing");
+		
+	}else if(((lifeExpectancy/100))*40 >= age && ((lifeExpectancy/100))*10 <= age ){
+		System.out.println("Animal is starting off slowly growing");
+			
+	}else{
+		System.out.println("Animal is older and is no longer growing");
 	
+	}
+	}
+	
+	
+	@Override
+	public void nutrition(){
+		
+		if(weight > idealWeight){
+			System.out.println("This animal is overweight");
+		}else if(weight <idealWeight){
+			System.out.println("This animal is underweight");
+		}else{ System.out.println("This animal is a healthy weight");
+		}
+		
+		
+	}
+
 	@Override
 	public void excrete() {
 		
@@ -127,7 +160,29 @@ System.out.println(breathsPerMin);
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
+	public double getWaste() {
+		return waste;
+	}
 
+	public void setWaste(double waste) {
+		this.waste = waste;
+	}
+
+	public int getBreathsPerMin() {
+		return breathsPerMin;
+	}
+
+	public void setBreathsPerMin(int breathsPerMin) {
+		this.breathsPerMin = breathsPerMin;
+	}
+
+	public int getLifeExpectancy() {
+		return lifeExpectancy;
+	}
+
+	public void setLifeExpectancy(int lifeExpectancy) {
+		this.lifeExpectancy = lifeExpectancy;
+	}
 }
 
 

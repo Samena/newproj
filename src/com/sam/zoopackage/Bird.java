@@ -1,12 +1,19 @@
 package com.sam.zoopackage;
 
+public class Bird extends Animal implements Flying{
 
-public class Bird extends Animal{
+	public Bird(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight) {
+		super(age, name, species, gender, size, weight, height, waste, height, enclosure, lifeExpectancy, idealWeight);}
 
-	public Bird(int age, String name, String species, String breed, String size, int weight, int height,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, waste, height, enclosure);
+	
+	
+	@Override
+	public void flying(){
+		if (species != "Penguin" || weight > 10){
+			System.out.println("This bird cannot fly");
+		}
+		
 	}
-
 	@Override
 	public void grow() {
 
@@ -24,8 +31,16 @@ public class Bird extends Animal{
 		
 	}
 
+
+
 	@Override
-	public void sensitivity() {
+	public void land() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void takeOff() {
 		// TODO Auto-generated method stub
 		
 	}

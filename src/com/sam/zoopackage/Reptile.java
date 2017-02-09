@@ -1,13 +1,13 @@
 package com.sam.zoopackage;
 
+
 public class Reptile extends Animal {
 
 	
 	//Constructor//
 	
-	public Reptile(int age, String name, String species, String breed, String size, int weight, int height, EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
-		
+	public Reptile(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
+		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
 	}
 	
 	//methods//
@@ -15,6 +15,12 @@ public class Reptile extends Animal {
 	}
 	
 	public void bask(){}
+
+	@Override
+	public void reproduce() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 

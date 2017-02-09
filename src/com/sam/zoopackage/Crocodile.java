@@ -11,8 +11,8 @@ public class Crocodile extends Reptile implements Swim {
 	
 	//Would use a builder pattern here to make more accurate but do not know how at the moment.
 	
-	public Crocodile(int age, String name, String species, String breed, String size, int weight, int height,boolean endangered, boolean dangerous,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
+	public Crocodile(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
+		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
 	}
 
 	public boolean isEndangered() {
@@ -30,21 +30,27 @@ public class Crocodile extends Reptile implements Swim {
 	public void setDangerous(boolean dangerous) {
 		this.dangerous = dangerous;
 	}
-
-	@Override
-	public void submerge() {
-	}
-
-	@Override
-	public void canFloat() {
-	}
-
-	@Override
-	public void emerge() {
-	}
 	
 public void nutrition(){
 	}
+
+@Override
+public void reproduce() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void canSwim() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void breatheUnderwater() {
+	// TODO Auto-generated method stub
+	
+}
 	
 
 }

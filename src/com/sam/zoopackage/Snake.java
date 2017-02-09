@@ -1,5 +1,6 @@
 package com.sam.zoopackage;
 
+
 public class Snake extends Reptile{
 	
 	//Variables//
@@ -15,8 +16,8 @@ public class Snake extends Reptile{
 //Constructor//
 	
 //Builder Pattern would be used here.
-	public Snake(int age, String name, String species, String breed, String size, int weight, int height, boolean venomous, boolean endangered, boolean nocturnal, boolean dangerous,EnclosureType enclosure) {
-		super(age, name, species, breed, size, weight, height, enclosure);
+	public Snake(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
+		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
 	}
 
 	
