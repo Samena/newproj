@@ -9,15 +9,14 @@ public abstract class Animal extends Enclosure implements LivingThing{
 	String size;
 	int weight;
 	int height;
-	double waste;
+	int wastePerDay;
 	int breathsPerMin;
-	int lifeExpectancy;
-	int idealWeight;
-
+	int foodQuantity;
+	int populationNumber;
 
 	//Constructor//
 	
-	public Animal(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
+	public Animal(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber){
 		super(enclosure);
 		
 		this.age = age;
@@ -28,82 +27,70 @@ public abstract class Animal extends Enclosure implements LivingThing{
 		this.weight = weight;
 		this.height = height; 
 		this.enclosure = enclosure;
-		this.waste = waste;
+		this.wastePerDay = wastePerDay;
 		this.breathsPerMin = breathsPerMin;
-		this.lifeExpectancy = lifeExpectancy;
-		this.idealWeight = idealWeight;
+		this.foodQuantity = foodQuantity;
+        this.populationNumber = populationNumber;
 	}
-	
 
+	
 	//Methods//
 
-@Override 
+
 public void grow(){
-	if(age >= 0 && ((lifeExpectancy/100))*10 >= age){
-		System.out.print("Animal is young and growing");
-		
-	}else if(((lifeExpectancy/100))*40 >= age && ((lifeExpectancy/100))*10 <= age ){
-		System.out.println("Animal is starting off slowly growing");
-			
-	}else{
-		System.out.println("Animal is older and is no longer growing");
-	
+	if(age <= 3){
+		this.height += height + 1;
+		this.weight += weight + 1;
 	}
-	}
-	
-	
+}
+
 	@Override
 	public void nutrition(){
-		
-		if(weight > idealWeight){
-			System.out.println("This animal is overweight");
-		}else if(weight <idealWeight){
-			System.out.println("This animal is underweight");
-		}else{ System.out.println("This animal is a healthy weight");
-		}
-		
-		
+		if (weight < 10 && age > 2){
+			this.foodQuantity += 2;
+			
+		}else{
+			this.foodQuantity -=2;
+	}
 	}
 
 	@Override
 	public void excrete() {
 		
-		if(waste < 3.5){
-			System.out.println("Normal amount of excretion");
-		}else{ System.out.println("Too much excretion, check for sickness");
-		}
+	if (wastePerDay >= ((weight/100))*10){
+		this.foodQuantity -= 2;
+	}else{ 
+		this.foodQuantity +=1;
+	}	
 	}
 
 	@Override
 	public void move() {	
 		
-		if (size == "large"){
-			System.out.println("Needs a large enclosure");
+		if(this.enclosure == EnclosureType.AMPHIBIANMUSEUM){
 			
-		}else{ System.out.println("Needs a small enclosure");
+			this.enclosure = EnclosureType.AMPHIBIANMUSEUM;
+			
 		}
 	}
 	
 	@Override
 	public void respire(){
 		
-        switch (breathsPerMin) {
-            case 1:  breathsPerMin = 10;
-                     break;
-            case 2:  breathsPerMin = 12;
-                     break;
-            case 3:  breathsPerMin = 15;
-                     break;
-            case 4:  breathsPerMin = 20;
-                     break;
-            case 5:  breathsPerMin = 50;
-                     break;
-            default: breathsPerMin = 0;
-                     break;
+		if(this.species == "Fish" && this.breathsPerMin >= 18){
+			this.breathsPerMin += 1;
+		}else{
+			this.breathsPerMin +=2;
+		}
         }
-System.out.println(breathsPerMin);
+	
+	@Override 
+	public void reproduce(){
+		if (this.gender == "Female" && this.age > 2){
+			this.populationNumber += 1;
+		}
+		}
 
-	}
 	
 	public String getName() {
 		return name;
@@ -160,13 +147,33 @@ System.out.println(breathsPerMin);
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	public double getWaste() {
-		return waste;
+	public int getWastePerDay() {
+		return wastePerDay;
 	}
 
-	public void setWaste(double waste) {
-		this.waste = waste;
+	public void setWastePerDay(int wastePerDay) {
+		this.wastePerDay = wastePerDay;
 	}
+
+	public int getFoodQuantity() {
+		return foodQuantity;
+	}
+
+
+	public void setFoodQuantity(int foodQuantity) {
+		this.foodQuantity = foodQuantity;
+	}
+
+
+	public int getPopulationNumber() {
+		return populationNumber;
+	}
+
+
+	public void setPopulationNumber(int populationNumber) {
+		this.populationNumber = populationNumber;
+	}
+
 
 	public int getBreathsPerMin() {
 		return breathsPerMin;
@@ -176,14 +183,7 @@ System.out.println(breathsPerMin);
 		this.breathsPerMin = breathsPerMin;
 	}
 
-	public int getLifeExpectancy() {
-		return lifeExpectancy;
 	}
-
-	public void setLifeExpectancy(int lifeExpectancy) {
-		this.lifeExpectancy = lifeExpectancy;
-	}
-}
 
 
 

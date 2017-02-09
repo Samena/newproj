@@ -6,6 +6,12 @@ public class Pigeon extends Bird implements Flying{
 	
 	private boolean endangered;
 
+//Constructor//
+
+	public Pigeon(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber, boolean endangered) {
+		
+		super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);}
+
 	public boolean isEndangered() {
 		return endangered;
 	}
@@ -13,11 +19,7 @@ public class Pigeon extends Bird implements Flying{
 	public void setEndangered(boolean endangered) {
 		this.endangered = endangered;
 	}
-
-	public Pigeon(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
-		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
-	}
-
+	
 	@Override
 	public void fly() {
 	

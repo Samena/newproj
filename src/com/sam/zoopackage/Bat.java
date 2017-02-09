@@ -13,9 +13,9 @@ public class Bat extends Mammal implements Flying{
 	
 //using 9 parameters may be too much. Would like to use builder pattern later on to condense it down later on. Don't know how to use this.
 	
-	public Bat(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, 
-	boolean endangered, boolean nocturnal, int flightSpeed, int power, int lifeExpectancy, int idealWeight){
-		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
+	public Bat(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber,
+	boolean endangered, boolean nocturnal, int flightSpeed, int power){
+		super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
 		
 	
 		this.endangered = endangered;

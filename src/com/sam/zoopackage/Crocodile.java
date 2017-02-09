@@ -11,8 +11,9 @@ public class Crocodile extends Reptile implements Swim {
 	
 	//Would use a builder pattern here to make more accurate but do not know how at the moment.
 	
-	public Crocodile(int age, String name, String species, String gender, String size, int weight, int height, double waste, int breathsPerMin, EnclosureType enclosure, int lifeExpectancy, int idealWeight){
-		super(age, name, species, gender, size, weight, height, waste, breathsPerMin, enclosure, lifeExpectancy, idealWeight);
+	public Crocodile(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber, boolean endangered, boolean dangerous) {
+		
+		super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
 	}
 	
 public void nutrition(){
