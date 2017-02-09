@@ -39,8 +39,8 @@ public abstract class Animal extends Enclosure implements LivingThing{
 
 public void grow(){
 	if(age <= 3){
-		this.height += height + 1;
-		this.weight += weight + 1;
+		this.height = height + 1;
+		this.weight = weight + 1;
 	}
 }
 
@@ -56,7 +56,6 @@ public void grow(){
 
 	@Override
 	public void excrete() {
-		
 	if (wastePerDay >= ((weight/100))*10){
 		this.foodQuantity -= 2;
 	}else{ 

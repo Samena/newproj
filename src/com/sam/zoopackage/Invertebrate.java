@@ -9,26 +9,7 @@ public class Invertebrate extends Animal {
 		super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
 
 	}
-	
-	//Methods//
-	@Override
-	public void grow() {
 
-	}
 
-	@Override
-	public void move() {	
-	}
-
-	@Override
-	public void nutrition(){
-		
-	}
-
-	@Override
-	public void reproduce() {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

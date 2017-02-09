@@ -2,42 +2,37 @@ package com.sam.zoopackage;
 
 public class Amphibian extends Animal implements Swim{
 	
-	public Amphibian(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber) {
+	private int swimSpeed;
+	
+	public Amphibian(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber, int swimSpeed) {
 	
 	super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
 }
 
 
-		
-
-	@Override
-	public void nutrition(){	
-	}
-
-	@Override
-	public void reproduce() {
-		if(this.gender.trim().toLowerCase() == "male"){
-			System.out.println("Cannot give birth to eggs");
-		}else{
-			System.out.println("Can give birth to eggs");
-			
-		}
-
-	}
-
-
 	@Override
 	public void canSwim() {
-		// TODO Auto-generated method stub
+
+		if (getWeight() > 5 && getBreathsPerMin() <= 30){
+			this.setSwimSpeed(getSwimSpeed() + 1);
+		}else{ 
+		this.setSwimSpeed(getSwimSpeed() - 1);
+		}
+
 		
 	}
 
 
-	@Override
-	public void breatheUnderwater() {
-		// TODO Auto-generated method stub
-		
+	public int getSwimSpeed() {
+		return swimSpeed;
 	}
+
+
+	public void setSwimSpeed(int swimSpeed) {
+		this.swimSpeed = swimSpeed;
+	}
+
+
 
 
 	

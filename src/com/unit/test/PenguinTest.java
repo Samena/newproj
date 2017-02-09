@@ -4,11 +4,41 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.sam.zoopackage.Penguin;
+
 public class PenguinTest {
+	
+	Penguin testPeng = new Penguin(1, "Pingu", "Penguin", "Male", "Medium", 5, 3, 2, 20, null, 10, 90, 6, 10, 7, true, 10);
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testPenguin(){
+		assertNotNull(testPeng);
+	}
+
+	
+	@Test
+	public void testGetSwimSpeed(){
+		assertEquals(testPeng.getSwimSpeed(), 10);
+	}
+	
+	@Test
+	public void testSetSwimSpeed(){
+		testPeng.setSwimSpeed(6);
+		assertEquals(testPeng.getSwimSpeed(), 6);
+		}
+	
+	@Test
+	public void testCanSwim(){
+		testPeng.canSwim();
+		assertEquals(8, testPeng.getSwimSpeed());
+	}
+
+	@Test
+	public void testNutrition(){
+		testPeng.nutrition();
+		assertEquals(8, testPeng.getFoodQuantity());
 	}
 
 }
+	
+

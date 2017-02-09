@@ -154,12 +154,7 @@ public void reproduce(){
 @Test 
 public void grow(){
 	testAnimal.grow();
-	assertEquals(3, testAnimal.getHeight());
-	assertEquals(2, testAnimal.getWeight());
+	assertEquals(4, testAnimal.getHeight());
+	assertEquals(3, testAnimal.getWeight());
 }
-
-
-
-
-
 }

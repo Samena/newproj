@@ -19,6 +19,11 @@ public class Snake extends Reptile{
 		
 		super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
 
+		
+		this.venomous = venomous;
+		this.endangered = endangered;
+		this.nocturnal = nocturnal;
+		this.dangerous = dangerous;
 	}
 	
 
@@ -63,9 +68,15 @@ public class Snake extends Reptile{
 		this.dangerous = dangerous;
 	}
 
-
-	public void move() {	
-	}
-	public void nutrition(){	
+		public void nutrition() {
+			
+			if (weight < 30 && age < 2){
+				this.foodQuantity += 10;
+				
+			}else{
+				this.foodQuantity -= 2;
+		}
+			
+		
 	}
 }
