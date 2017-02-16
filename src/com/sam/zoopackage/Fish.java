@@ -1,42 +1,44 @@
 package com.sam.zoopackage;
 
+public class Fish extends Animal implements Swim {
+	// Attributes//
 
-public class Fish extends Animal implements Swim{
-	//Attributes//
-	
 	private String colour;
 	private int swimSpeed;
-	
-	//Constructor//
 
-	public Fish(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber, String colour, int swimSpeed) {
-		
-		super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
-	
-	this.colour = colour;
-	this.swimSpeed = swimSpeed;
-	
-	
+	// Constructor//
+
+	public Fish(int age, String name, String species, String gender, int weight, int height, int wastePerDay,
+			int breathsPerMin, int foodQuantity, int populationNumber, int averageLifeSpan, String colour,
+			int swimSpeed) {
+
+		super(age, name, species, gender, weight, height, wastePerDay, breathsPerMin, foodQuantity, populationNumber,
+				averageLifeSpan);
+
+		this.colour = colour;
+		this.swimSpeed = swimSpeed;
+
 	}
-	
-	//Methods//
+
+	// Methods//
 	@Override
-	public void nutrition(){
-		if (weight > 3 && age > 2){
+	public void nutrition() {
+		if (weight > 3 && age > 2) {
 			this.foodQuantity += 1;
-			
-		}else{
-			this.foodQuantity -=1;
-	}
+
+		} else {
+			this.foodQuantity -= 1;
+		}
 	}
 
 	@Override
-	public void canSwim() {
-		if (getWeight() > 5 && getBreathsPerMin() <= 10){
+	public boolean canSwim() {
+		if (getWeight() > 5 && getBreathsPerMin() <= 10) {
 			this.setSwimSpeed(getSwimSpeed() + 1);
-		}else{ 
-		this.setSwimSpeed(getSwimSpeed() - 1);
-		}	
+		} else {
+			this.setSwimSpeed(getSwimSpeed() - 1);
+		}
+		return false;
 	}
 
 	public int getSwimSpeed() {
@@ -55,5 +57,16 @@ public class Fish extends Animal implements Swim{
 		this.colour = colour;
 	}
 
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void respire() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

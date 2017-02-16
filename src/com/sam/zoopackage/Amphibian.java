@@ -1,39 +1,46 @@
 package com.sam.zoopackage;
 
-public class Amphibian extends Animal implements Swim{
-	
+public class Amphibian extends Animal implements Swim {
+
 	private int swimSpeed;
-	
-	public Amphibian(int age, String name, String species, String gender, String size, int weight, int height, int wastePerDay, int breathsPerMin, EnclosureType enclosure, int foodQuantity, int populationNumber, int swimSpeed) {
-	
-	super(age, name, species, gender, size, weight, height, wastePerDay, breathsPerMin, enclosure, foodQuantity, populationNumber);
-}
+	private boolean hasGills;
 
+	public Amphibian(int age, String name, String species, String gender, int weight, int height, int wastePerDay,
+			int breathsPerMin, int foodQuantity, int populationNumber, int averageLifeSpan, int swimSpeed,
+			boolean hasGills) {
 
-	@Override
-	public void canSwim() {
+		super(age, name, species, gender, weight, height, wastePerDay, breathsPerMin, foodQuantity, populationNumber,
+				averageLifeSpan);
 
-		if (getWeight() > 5 && getBreathsPerMin() <= 30){
-			this.setSwimSpeed(getSwimSpeed() + 1);
-		}else{ 
-		this.setSwimSpeed(getSwimSpeed() - 1);
-		}
-
-		
 	}
-
 
 	public int getSwimSpeed() {
 		return swimSpeed;
 	}
 
-
 	public void setSwimSpeed(int swimSpeed) {
 		this.swimSpeed = swimSpeed;
 	}
 
+	@Override
+	public boolean canSwim() {
+		if (this.getSpecies() == "Amphibian" && this.hasGills == true) {
+			System.out.println("Can swim");
+		}
+		return hasGills;
 
+	}
 
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
 
-	
+	}
+
+	@Override
+	public void respire() {
+		// TODO Auto-generated method stub
+
+	}
+
 }
