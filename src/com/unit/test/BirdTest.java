@@ -8,7 +8,7 @@ import com.sam.zoopackage.Bird;
 
 public class BirdTest {
 	
-	Bird testBird = new Bird(4, "Tweedy Pie", "Bird", "Male", "Small", 1, 1, 1, 10, null, 3, 100, 10, 2, 5);
+	Bird testBird = new Bird(4, "Tweedy Pie", "Bird", "Male", 1, 1, 1, 10, 3, 100, 10, 2, 5, 0);
 
 	@Test
 	public void testBirdConstructor(){

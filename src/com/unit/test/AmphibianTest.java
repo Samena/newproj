@@ -8,7 +8,7 @@ import com.sam.zoopackage.Amphibian;
 
 public class AmphibianTest {
 
-	Amphibian testAmp = new Amphibian(1, "Bob", "Amphibian", "Female", "Small", 6, 1, 29 , 1, null, 2, 3, 0);
+	Amphibian testAmp = new Amphibian(1, "Bob", "Amphibian", "Female", 6, 1, 29 , 1, 2, 3, 0, 0, true);
 	
 	@Test
 	public void testAmphibian(){

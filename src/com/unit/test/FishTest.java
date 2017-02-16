@@ -8,7 +8,7 @@ import com.sam.zoopackage.Fish;
 
 public class FishTest {
 
-	Fish testFish = new Fish(1, "Nemo", "Fish", "Male", "Small", 2, 3, 5, 6, null, 1, 3, "Orange", 6);
+	Fish testFish = new Fish(1, "Nemo", "Fish", "Male", 2, 3, 5, 6, 1, 3, 0, "Orange", 6);
 	
 	@Test
 	public void testFishConstructor(){

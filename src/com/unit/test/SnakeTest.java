@@ -8,21 +8,14 @@ import com.sam.zoopackage.Snake;
 
 public class SnakeTest {
 	
-	Snake testSnake = new Snake(2, "scales", "Snake", "Male", "Large", 90, 40,2 , 10, null, 5, 55, true, false, false, true);
+	Snake testSnake = new Snake(2, "scales", "Snake", "Male", null, 90, 40,2 , 10, 5, 55, true, false, true);
 
 	@Test
 	public void testSnakeCons(){
 		assertNotNull(testSnake);	
 	}
-	@Test 
-	public void testIsDangerous(){
-		assertEquals(testSnake.isDangerous(), false);	
-	}
-	@Test
-	public void testSetDangerous(){
-		testSnake.setDangerous(true);
-		assertEquals(testSnake.isDangerous(), true);
-	}
+	
+
 	@Test
 	public void testIsEndangered(){
 		assertEquals(testSnake.isEndangered(), false);

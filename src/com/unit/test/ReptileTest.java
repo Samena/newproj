@@ -8,7 +8,7 @@ import com.sam.zoopackage.Reptile;
 
 public class ReptileTest {
 	
-	Reptile testReptile = new Reptile(0, null, null, null, null, 0, 0, 0, 0, null, 0, 0);
+	Reptile testReptile = new Reptile(0, null, null, null, 0, 0, 0, 0, 0, 0, 0);
 
 	@Test
 	public void testReptile() {

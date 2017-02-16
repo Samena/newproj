@@ -8,7 +8,7 @@ import com.sam.zoopackage.Penguin;
 
 public class PenguinTest {
 	
-	Penguin testPeng = new Penguin(1, "Pingu", "Penguin", "Male", "Medium", 5, 3, 2, 20, null, 10, 90, 6, 10, 7, true, 10);
+	Penguin testPeng = new Penguin(1, "Pingu", "Penguin", "Male", null, 5, 3, 2, 20, 10, 90, 6, 10, 7, 0, true, 10);
 
 	@Test
 	public void testPenguin(){

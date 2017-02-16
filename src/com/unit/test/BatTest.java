@@ -8,7 +8,7 @@ import com.sam.zoopackage.Bat;
 
 public class BatTest {
 	
-	Bat testBat = new Bat(2, "Batty", "Bat", "Male", "Small", 2, 2, 1, 50, null, 2, 10, true, true, 10, 2, 3);
+	Bat testBat = new Bat(2, "Batty", "Bat", "Male", 2, 2, 1, 50,2, 10, 0, true, true, 10, 2, 3);
 	
 	
 	@Test

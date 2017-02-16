@@ -8,7 +8,7 @@ import com.sam.zoopackage.Cat;
 
 public class CatTest {
 
-	Cat testCat = new Cat(5, "Daisy", "Cat", "Female","Medium", 8, 3, 3, 15, null, 20, 1000, false, false, true, 1, 10, 5);
+	Cat testCat = new Cat(5, 8, 3, false);
 	
 	
 	
@@ -52,16 +52,7 @@ public class CatTest {
 		assertEquals(testCat.isNocturnal(), true);
 	}
 	
-	@Test
-	public void testIsDangerous(){
-		assertEquals(testCat.isDangerous(), true);
-	}
-	
-	@Test
-	public void testSetDangerous(){
-		testCat.setDangerous(false);
-		assertEquals(testCat.isDangerous(), false);
-	}
+
 	@Test
 	public void testGetAvgSpeed(){
 		assertEquals(testCat.getAvgSpeed(), 5);
