@@ -18,19 +18,21 @@ public class AnimalTest1 {
 		assertNotNull(testAnimal);
 	}
 
+	
+	
 	// Test getters and setters//
 
-	//@Test
-	//public void testGetAnimalAge(){
-	//	assertEquals(testAnimal.getAge(), 1);
-	//}
+	@Test
+	public void testGetAnimalAge(){
+	assertEquals(testAnimal.getAge(), 1);
+	}
 	
 
-	//@Test
-	//public void testSetAnimalAge() {
-	//	testAnimal.setAge(3);
-	//	assertEquals(testAnimal.getAge(), 3);
-	//}
+	@Test
+	public void testSetAnimalAge() {
+	testAnimal.setAge(3);
+	assertEquals(testAnimal.getAge(), 3);
+}
 
 	@Test
 	public void testGetAnimalName() {

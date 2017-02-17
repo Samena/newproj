@@ -10,7 +10,7 @@ public abstract class Animal implements LivingThing {
 
 	protected int age;
 	protected String name;
-	private String species;
+	protected String species;
 	protected String gender;
 	protected int weight;
 	protected int height;
@@ -21,13 +21,10 @@ public abstract class Animal implements LivingThing {
 	protected int averageLifeSpan;
 
 	// Constructor//
-	
-	public Animal(int height, int populationNumber, int averageLifeSpan, boolean nocturnal){
-		
-		
-		
+
+	public Animal(int height, int populationNumber, int averageLifeSpan, boolean nocturnal) {
+
 	}
-	
 
 	public Animal(int age, String name, String species) { // Put in default
 															// values for name
@@ -67,8 +64,6 @@ public abstract class Animal implements LivingThing {
 	}
 
 	// Methods//
-
-
 
 	public void grow() {
 		if (age <= 3) {
@@ -143,10 +138,9 @@ public abstract class Animal implements LivingThing {
 		this.gender = gender;
 	}
 
-	protected int getAge() {
+	public int getAge(){
 		return age;
 	}
-
 	public void setAge(int age) {
 		this.age = age;
 	}
